@@ -38,11 +38,12 @@ class DBopreation {
      */
 
     insertData(db, data, callback){
+        // console.log(db, '====insertData')
         if( !db || !data || typeof callback !== 'function' ){
             console.log( ...arguments ,'---参数有误----')
             return false
         }
-        let cllection = this.getCollection( db, 'products' )
+        let collection = this.getCollection( db, 'products' )
         collection.insert(data, function(err, res){
             if( err ) {
                 console.log(err)
@@ -54,7 +55,7 @@ class DBopreation {
 }
 
 if( !dbOpreation ){
-    dbOpreation = new MyprojectDB()
+    dbOpreation = new DBopreation()
 }
 
 module.exports = {
