@@ -3,7 +3,7 @@
  */
 
 /**
- * @private instance
+ * @private dbOpreation
  */
 
 var dbOpreation = null 
