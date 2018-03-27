@@ -5,3 +5,10 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+    
+    script( src = 'https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js' )
+    script( src = "https://cdn.bootcss.com/vue/2.5.16/vue.min.js" )
+    
+    block javascript
+    script( type = "text/javascript" ).
+        console.log(Vue)
