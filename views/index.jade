@@ -8,3 +8,6 @@ block content
 block javascript
   script(type="text/javascript").
     console.log($)
+    $.get('/api/test', (res) => {
+        console.log(res)
+    })
