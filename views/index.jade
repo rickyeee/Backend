@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p.a Welcome to #{title}
   p hahahhaha
 
 block javascript
@@ -10,4 +10,7 @@ block javascript
     console.log($)
     $.get('/api/test', (res) => {
         console.log(res)
+        console.log(vm.foo)
+        console.log(vm)
+        //- vm.foo = 1111
     })
