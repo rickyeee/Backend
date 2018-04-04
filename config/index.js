@@ -1,12 +1,17 @@
-//l链接mlab
-const lab = {
-	dburl : 'mongodb://admin:123456@ds233739.mlab.com:33739/mydb'
+//生产环境
+const prod = {
+	dburl : require('./prod.env.js').dburl
 }
-//链接本地
-const dev = {
-	dburl : 'mongodb://127.0.0.1:12345/'
+//开发环境
+const dev= {
+	dburl : require('./dev.env.js').dburl
+}
+//测试环境
+const test= {
+	dburl : require('./test.env.js').dburl
 }
 module.exports = {
-   lab,
-   dev
+   prod
+   ,dev
+   ,test
 }
