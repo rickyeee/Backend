@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "start:lab": "cross-env db_remote=lab nodemon ./db/db.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
+    "cross-env": "^5.1.4",
     "nodemon": "^1.17.3"
   }
 }

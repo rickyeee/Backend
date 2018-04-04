@@ -1,11 +1,13 @@
 const path = require('path')
 const mongoose = require('mongoose') //引入mongo客户端对象
 const config = require(path.resolve(__dirname, '../config/index.js'))
+const db_remote = process.env.db_remote
 // console.log(config)
-
-const dbop = require('./classes/dbclass.js').DBopreation //数据库操作类
-
-mongoose.connect(config.dburl)
+console.log(config[db_remote].dburl)
+// const dbop = require('./classes/dbclass.js').DBopreation //数据库操作类
+const dburl = db_remote ? config[db_remote].dburl
+	: config.dev.dburl
+mongoose.connect(dburl)
 const db = mongoose.connection;
 
 const kittySchema = mongoose.Schema({
