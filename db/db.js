@@ -1,12 +1,14 @@
 const path = require('path')
 const mongoose = require('mongoose') //引入mongo客户端对象
-const config = require(path.resolve(__dirname, '../config/index.js'))
-const db_remote = process.env.db_remote
+const config = require('../config/index.js')
+const env = process.env.NODE_ENV
 // console.log(config)
-console.log(config[db_remote].dburl)
+console.log(config[env].dburl)
 // const dbop = require('./classes/dbclass.js').DBopreation //数据库操作类
-const dburl = db_remote ? config[db_remote].dburl
+
+const dburl = env ? config[env].dburl
 	: config.dev.dburl
+
 mongoose.connect(dburl)
 const db = mongoose.connection;
 

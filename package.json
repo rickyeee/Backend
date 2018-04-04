@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "start:lab": "cross-env db_remote=lab nodemon ./db/db.js"
+    "dev": "cross-env NODE_ENV=dev nodemon ./bin/www",
+    "start:test": "cross-env NODE_ENV=test nodemon ./db/db.js",
+    "start:prod": "cross-env NODE_ENV=prod nodemon ./bin/www"
   },
   "repository": {
     "type": "git",
