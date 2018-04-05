@@ -5,9 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-var test = require('./routes/api/test');
+var registRouter = require('./routes');
 
 var app = express();
 
@@ -25,13 +23,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+//注册路由
+registRouter(app);
+
 app.use((req, res, next) => {
     console.log('here is middleware')
     next()
-})
-app.use('/api/test', test);
+});
 
 
 // if non-match any router-path, catch 404 and forward to error handler
