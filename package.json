@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon ./bin/www",
-    "start:test": "cross-env NODE_ENV=test nodemon ./bin/www",
-    "start:prod": "cross-env NODE_ENV=prod nodemon ./bin/www"
+    "test": "cross-env NODE_ENV=test nodemon ./bin/www",
+    "prod": "cross-env NODE_ENV=prod nodemon ./bin/www"
   },
   "repository": {
     "type": "git",
