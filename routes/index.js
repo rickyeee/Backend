@@ -1,4 +1,4 @@
-const user  = require('./user')
+const user  = require('./users')
 const index = require('./home')
 const test  = require('./api/test.js')
 
