@@ -10,6 +10,10 @@ const env = process.env.NODE_ENV
 // const fs  = require('fs') 
 const DBURL = env ? config[env].dburl :
     config.dev.dburl
+
+console.log('----------server is running in---------', env)
+console.log('----------db is connecting to---------', DBURL)
+
 //连接数据库
 mongoose.connect(DBURL)
 //获取连接
