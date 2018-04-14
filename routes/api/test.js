@@ -23,8 +23,10 @@ console.log(X1.name)
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+
     db.Vehicle.find({ name: /^bmw/ }, function (err, car) {
         if (err) return console.error(err);
+        // console.log(typeof car)
         console.log(car, '-------car-------');
         res.json({code: 200, data: car || []});
     })

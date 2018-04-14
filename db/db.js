@@ -14,7 +14,7 @@ const env = process.env.NODE_ENV
 
 const DBURL = env ? config[env].dburl :
     config.dev.dburl
-
+console.log('db is connecting to', DBURL)
 mongoose.connect(DBURL)
 const db = mongoose.connection;
 
