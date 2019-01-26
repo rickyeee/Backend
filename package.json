@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon ./bin/www",
     "test": "cross-env NODE_ENV=test nodemon ./bin/www",
-    "prod": "cross-env NODE_ENV=prod nodemon ./bin/www"
+    "prod": "cross-env NODE_ENV=prod nodemon ./bin/www",
+		"start": "pm2 start start.config.yml --env production"
   },
   "repository": {
     "type": "git",
