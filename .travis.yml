@@ -1,0 +1,35 @@
+language: node_js
+node_js: 
+  - 8.9.3
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+# 仓库的分支
+branches:
+  only:
+  - master
+
+#before_script:
+ # - npm install -g gulp
+
+script:
+  - npm run start
+
+# after_script:
+#   - cd ./public
+#   - git init
+#   - git config user.name "ganli"
+#   - git config user.email "gl09025@gmail.com"
+#   - git add .
+#   - git commit -m "Update docs"
+#   - git push --force --quiet "https://${githubblog}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - blog-resource
+env:
+ global:
+   - GH_REF: github.com/rickyscoder/Backend.git
