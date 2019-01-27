@@ -25,6 +25,7 @@ before_install:
   - cp .travis/ssh_config ~/.ssh/config
 
 install:
+  - npm install pm2 -g
   - npm install
 
 script: 
