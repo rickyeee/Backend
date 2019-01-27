@@ -1,3 +1,4 @@
 node_modules
 .git-credentials
 # .travis.yml
+logs
