@@ -14,15 +14,16 @@ env:
   - GH_REF: github.com/rickyscoder/Backend.git
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_f27c7aac39c5_key -iv $encrypted_f27c7aac39c5_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+  - openssl aes-256-cbc -K $encrypted_f27c7aac39c5_key -iv $encrypted_f27c7aac39c5_iv
+    -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
 # # 配置git 的个人信息
 #   - git config --global user.name 'xxx'
 #   - git config --global user.email xxx@xxx.com
 # 配置 ssh
-  - eval $(ssh-agent)
-  - ssh-add ~/.ssh/id_rsa
-  - cp .travis/ssh_config ~/.ssh/config
+  # - eval $(ssh-agent)
+  # - ssh-add ~/.ssh/id_rsa
+  # - cp .travis/ssh_config ~/.ssh/config
 
 install:
   - npm install pm2 -g
