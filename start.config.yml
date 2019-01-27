@@ -1,6 +1,6 @@
 apps:
   - script: app.js
-    name: myBackend
+    name: mybackend
     # instances: 4
     exec_mode: fork
   # 第二个实例
