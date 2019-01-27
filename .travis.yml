@@ -33,7 +33,7 @@ script:
   - npm run start
 
 after_success:
-  - ssh -t root@47.104.215.172 -p 22 'cd /home/node-avntador/Backend && git pull && npm run start'
+  - ssh root@47.104.215.172 'cd /home/node-avntador/Backend && git pull && npm run start'
 
 # 跳过登录验证
 addons:
