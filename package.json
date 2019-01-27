@@ -6,7 +6,7 @@
     "dev": "cross-env NODE_ENV=dev nodemon ./bin/www",
     "test": "cross-env NODE_ENV=test nodemon ./bin/www",
     "prod": "cross-env NODE_ENV=prod nodemon ./bin/www",
-		"start": "pm2 start start.config.yml --env prod"
+    "start": "pm2 start start.config.yml --env prod"
   },
   "repository": {
     "type": "git",
@@ -22,8 +22,8 @@
     "mongodb": "^3.0.4",
     "mongoose": "^5.0.12",
     "morgan": "^1.9.0",
-		"serve-favicon": "^2.4.5",
-		"cross-env": "^5.1.4",
+    "serve-favicon": "^2.4.5",
+    "cross-env": "^5.1.4",
     "nodemon": "^1.17.3"
   }
 }
