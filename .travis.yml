@@ -11,15 +11,15 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_c2b240eb2b8b_key -iv $encrypted_c2b240eb2b8b_iv
   -in .travis/id_rsa_deploy.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
-# - eval $(ssh-agent)
-# - ssh-add ~/.ssh/id_rsa
-# - cp .travis/ssh_config ~/.ssh/config
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
 install:
 - npm install pm2 -g
 - npm install
 script:
 - npm run start
 after_success:
-- ssh root@47.104.215.172 'cd /home/node-avntador/Backend && git pull && npm run start'
+- ssh alinode 'cd /home/node-avntador/Backend && git pull && npm run start'
 addons:
   ssh_known_hosts: 47.104.215.172
