@@ -20,7 +20,7 @@ install:
 script:
 - npm run start
 after_success:
-- ssh alicloud './deploy.sh'
+- ssh alicloud './deploy'
 addons:
   ssh_known_hosts: 47.104.215.172
   
