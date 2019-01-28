@@ -24,8 +24,8 @@ apps:
     restart_delay: 1000
     #  200 seconds, defaults to 1000
     autorestart: true
-    max_restarts: 10
     #  defaults to 15
-    max_memory_restart: 500M
+    max_restarts: 10
     #  1 megabytes, e.g.: 2G, 10M, 100K, 1024 the default unit is byte.
+    max_memory_restart: 500M
     # ignore_watch: logs
