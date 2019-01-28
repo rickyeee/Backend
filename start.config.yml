@@ -5,7 +5,7 @@ apps:
     exec_mode: fork
   # 第二个实例
   # - script : worker.js
-    watch: true
+    # watch: true
     # 通过 process.env.NODE_ENV 获取
     # pm2通过在配置文件中通过env_xx来声明不同环境的配置，
     # 然后在启动应用时，通过--env参数指定运行的环境
@@ -26,5 +26,6 @@ apps:
     autorestart: true
     max_restarts: 10
     #  defaults to 15
-    max_memory_restart: 1M
+    max_memory_restart: 500M
     #  1 megabytes, e.g.: 2G, 10M, 100K, 1024 the default unit is byte.
+    # ignore_watch: logs
