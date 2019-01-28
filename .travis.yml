@@ -20,6 +20,6 @@ install:
 script:
 - npm run start
 after_success:
-- ssh alinode 'cd /home/node-avntador/Backend && git pull && npm run start'
+- ssh alicloud 'cd /home/node-avntador/Backend && git pull && npm run start'
 addons:
   ssh_known_hosts: 47.104.215.172
