@@ -20,7 +20,7 @@ install:
 script:
 - npm run start
 after_success:
-- ssh alicloud 'cd /home/node-avntador/Backend && git pull && cp -r ./public/* /usr/local/nginx/html/resume/ && npm run start'
+- ssh alicloud 'cd /home/node-avntador/Backend && git pull && rm -rf /usr/local/nginx/html/resume/* && cp -r ./public/* /usr/local/nginx/html/resume/ && npm run start'
 addons:
   ssh_known_hosts: 47.104.215.172
   
