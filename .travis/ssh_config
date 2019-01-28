@@ -1,5 +1,6 @@
-Host github.com
+Host alicloud
+	Hostname 47.104.215.172
   User root
   StrictHostKeyChecking no
-  IdentityFile ~/.ssh/id_rsa_deploy
+  IdentityFile ~/.ssh/id_rsa
   IdentitiesOnly yes
